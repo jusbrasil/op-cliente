@@ -4,7 +4,7 @@ import requests
 
 # A variável api_key armazena o Token de usuário
 
-api_key = "0c6414cb-ee93-4843-8ad1-3ead0dbbd8e3"
+api_key = "e2d85934-9bc8-4811-baf6-59e5069a279d"
 
 # Uma lista é criada com todos os números de processos a serem incluidos no DB
 
@@ -206,15 +206,15 @@ lista_processos =[
 ]
 
 if __name__ == '__main__':
-	# Itera sob cada processo e gera um JSON com o número do processo para fazer um POST request
-	# Retorna o status do POST request
-	
-	for processo in lista_processos:
-		payload = {
-		    'numero': processo
-		}
-		url = "http://localhost:5000/api/proc?api_key=" + api_key
-		response = requests.post(url, json=payload)
-		response_data = response.json()
-		print response_data
+    # Itera sob cada processo e gera um JSON com o número do processo para fazer um POST request
+    # Retorna o status do POST request
+    
+    for processo in lista_processos:
+        payload = {
+            'numero': processo
+        }
+        url = "http://localhost:5000/api/proc?api_key=" + api_key
+        response = requests.post(url, json=payload)
+        response_data = response.json()
+        print response_data
 
