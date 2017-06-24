@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import requests
-
+from pprint import pprint
 # A variável api_key armazena o Token de usuário
 
 api_key = "e2d85934-9bc8-4811-baf6-59e5069a279d"
@@ -211,10 +211,13 @@ if __name__ == '__main__':
     
     for processo in lista_processos:
         payload = {
-            'numero': processo
+            'numero': processo,
+            'is_monitored_tribunal': True,
+            'is_monitored_diario': False,
+            'monitor_period': 2,  # 36h semana
         }
-        url = "http://localhost:5000/api/proc?api_key=" + api_key
+        url = "https://op.digesto.com.br/api/proc?api_key=" + api_key
         response = requests.post(url, json=payload)
         response_data = response.json()
-        print response_data
+        pprint(response_data)
 
