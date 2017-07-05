@@ -4976,7 +4976,7 @@ if __name__ == '__main__':
             'numero': processo,
             'is_monitored_tribunal': True,
             'is_monitored_diario': False,
-            'monitor_period': 2,  # 36h semana
+            'monitor_period': 2,  # 36h
         }
         url = "https://op.digesto.com.br/api/proc?api_key=" + api_key
         response = requests.post(url, json=payload)
