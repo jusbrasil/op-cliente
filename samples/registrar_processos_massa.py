@@ -2,12 +2,11 @@
 
 import requests
 from pprint import pprint
-# A variável api_key armazena o Token de usuário
 
-api_key = "e2d85934-9bc8-4811-baf6-59e5069a279d"
+# A variável api_key armazena o Token de usuário
+api_key = "e2d85934-9bc8-4811-baf6-59e5069b2791"
 
 # Uma lista é criada com todos os números de processos a serem incluidos no DB
-
 lista_processos = """0022615-39.2016.8.11.0002
 0820358-48.2016.8.23.0010
 0007803-63.2016.8.05.0000
@@ -21,6 +20,7 @@ if __name__ == '__main__':
     # Retorna o status do POST request
     
     for processo in lista_processos:
+        # ver detalhes de um processo monitorado em https://op.digesto.com.br/doc_api/schemas/proc.html
         payload = {
             'numero': processo,
             'is_monitored_tribunal': True,
