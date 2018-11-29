@@ -6,7 +6,7 @@ import csv
 from pprint import pprint
 
 # A variável api_key armazena o Token de usuário
-api_key = "....-1f78-4152-8097-b4a49cbe084b"
+api_key = "..."
 
 
 if __name__ == '__main__':

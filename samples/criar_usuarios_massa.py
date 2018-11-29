@@ -4,7 +4,7 @@ import requests
 from pprint import pprint
 
 # A variável api_key armazena o Token de usuário
-api_key = "0ed03bdc-dec7-4ac6-a385-3d0c8aaaa19b"
+api_key = "..."
 
 # Uma lista é criada com todos os números de processos a serem incluidos no DB
 
@@ -20,7 +20,7 @@ if __name__ == '__main__':
     for email in lista_emails:
         email = email.strip()
         payload = {
-            'name': email.split('@')[0].replace('.',' ').title(),
+            'name': email.split('@')[0].replace('.', ' ').title(),
             'email': email,
             'roles': ["tribproc.buscar_proc"],
         }
