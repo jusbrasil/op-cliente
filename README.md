@@ -4,10 +4,7 @@ Código de referência para acesso à [API do Digesto Operações](https://blog.
 
 # Conteúdo
 
-* classificacao de tipos de audiencia
-* tipos de andamento inteligente
-* nomes e IDs de comarcas e foros e sufixos CNJ para todo Brasil
-* código python exemplo para consumir a API do digsto operacoes
+* código python exemplo para consumir a API do Digesto Operações
 
 # Licença
 
