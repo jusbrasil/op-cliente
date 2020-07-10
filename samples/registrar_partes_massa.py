@@ -14,6 +14,7 @@ if __name__ == '__main__':
     # Retorna o status do POST request
     # Uma lista é criada com todos as partes e CNPJS a serem incluidos no monitoramento
     # definido manualmente
+
     if False:
         partes = [(u'nome...', 'cnpj'),
                   ]
@@ -22,11 +23,14 @@ if __name__ == '__main__':
         my_file = open("partes.csv", 'r')
         reader = csv.reader(my_file, delimiter=',')
         partes = list(reader)
-    # lendo de excel
-    import pandas
 
-    partes = [[x[0], x[1]] for index, x in pandas.read_excel(
-        '/Users/rnc/Downloads/Empresas SAP  08.08.2017.xlsx').iterrows()]
+    # lendo de excel
+    if True:
+        # necessário instala-lo com o comando "pip install pandas"
+        import pandas
+
+        partes = [[x[0], x[1]] for index, x in pandas.read_excel(
+            '/Users/rnc/Downloads/Empresas SAP  08.08.2017.xlsx').iterrows()]
 
     ok = 0
     for nome, cnpj in partes:
@@ -44,5 +48,5 @@ if __name__ == '__main__':
         response_data = response.json()
         pprint(response_data)
 
-    print 'solicitados', len(partes)
-    print 'sucesso', ok
+    print('solicitados', len(partes))
+    print('sucesso', ok)
