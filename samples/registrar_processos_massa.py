@@ -6,7 +6,7 @@ from pprint import pprint
 # A variável api_key armazena o Token de usuário
 api_key = "..."
 
-# Uma lista é criada com todos os números de processos a serem incluidos no DB
+# Uma lista é criada com todos os números de processos a serem incluidos no Op/API
 lista_processos = [
     ['1315271', '08052625820148120110', ],
     ['1588098', '01735267420128190004', ],
